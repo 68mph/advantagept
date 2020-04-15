@@ -308,7 +308,7 @@ input[type="submit"], .button, .espbtn {
 	padding: 12px 38px;
 	/* clear:both; */
 	border-radius:35px;
-	/* display: inline-block; */
+	display: inline-block;
 	text-transform: uppercase;
 	/* min-width: 200px; */
 	box-shadow: 0px 10px 20px #b9b5b5;
@@ -711,7 +711,10 @@ a.pdf:hover {background:#0c59c3;}
 .page-id-197 header, .page-id-197 footer, .page-id-197 .carousel, .page-id-197 figure, .page-id-197 .map, .page-id-197 .requestInfo {display:none;}
 .page-id-197 h2 {text-align: center;font-size:36px}
 
+
 /*Testimonials*/
+.home .testimonials {grid-template-rows: repeat(1, 1fr);
+}
 .testimonials {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -720,11 +723,19 @@ a.pdf:hover {background:#0c59c3;}
 	margin: 0 0 70px;
 }
 .testimonials .box {
-	background:#fff;
+	background: #fff;
 	display:block;
 	padding:16px;
 	margin: 0;
 	box-shadow: 10px 10px 15px #f3f0f0;
+}
+
+.testimonials .box:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f10d";
+    font-size:2.8rem;
+    color: #66ccf5;
 }
 
 .testimonials .box em {
@@ -772,16 +783,56 @@ a.pdf:hover {background:#0c59c3;}
     color: #0e9fda;
 }
 
+#about-card {
+	max-width:1000px;
+	margin: 6rem auto;
+}
+
+.photo-grid {
+	display:grid;
+	grid-template-columns: 268px auto auto;
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap:22px;
+	margin: 6rem 0 0;
+}
+
+.photo-grid .sm2 {
+	grid-row-start: 2;
+}
+
+.photo-grid .lg1 {
+	grid-row-end: span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.about-info {
+	    grid-column-start: 3;
+	    grid-row-end: span 2;
+	    padding: 3rem 2rem;
+}
+
+.about-info .button {
+	margin: 2rem 0 0;
+}
+
+.about-info h3 {
+	text-align:left;
+	padding: 0 0 1.8rem;
+	margin: 0;
+	font-size: 2.6rem;
+}
+
 /*HOME*/
 .grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 11fr);
 	grid-gap: 24px;
-	margin: 4em 0 6em;
+	margin: 4em 0 10em;
 }
 .blurb {/* margin: 34px; */padding: 2rem 4rem;text-align:center;box-shadow: 4px 4px 24px #efefef;border-radius: 8px;}
-.blurb h3 {padding:0;font-size:2rem;font-weight: 600;text-align: center;padding: 1rem 0;}
+.blurb h3 {padding:0;font-size: 2.3rem;font-weight: 400;text-align: center;padding: 1rem 0;}
 .blurb img {
 	padding: 1rem;
 	height: 75px;
@@ -794,7 +845,7 @@ a.pdf:hover {background:#0c59c3;}
 i.fa-mountain {font-size:3rem}
 .mission {display:flex;/* margin: 0 0 3.4em; */}
 .mission h3 {padding: 1rem 0;font-size:2.2rem;font-weight: 400;}
-.mission div {padding: 1.2rem 3.4rem;text-align: center;/* box-shadow: 20px 20px 40px #e0dbdb; *//* margin:0 14px */}
+.mission div {padding: 0 3.4rem;text-align: center;/* box-shadow: 20px 20px 40px #e0dbdb; *//* margin:0 14px */}
 .mission img {height: 60px;}
 .mission a.more {display:block;font-weight:600;padding: 1.4rem 0 0;}
 .grid-3 {
@@ -841,6 +892,19 @@ footer .locations {width:53%;}
 }
 /* MOBILE ------- */
 @media (max-width: 970px) {
+	
+	.photo-grid {
+		display:block;	
+	}	
+	.photo-grid img {
+		width:100%;
+	}
+	.about-info, .about-info h3 {
+	text-align:center;
+}
+	
+.testimonials {display:block}	
+.testimonials .box {margin: 14px 0;}
 	
 /*HOME*/	
 .grid {display:block;}

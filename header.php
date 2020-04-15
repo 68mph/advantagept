@@ -41,7 +41,7 @@
 
     <div class="inner">
 		<div class="site-branding">
-			<span class="site-logo-wh"><a href="/"> <img src=""/><img src="https://advantageptbrick.com/~advanub5/wp-content/themes/hogeyboom/images/svg/logo-lt.svg" width="273" height="109" alt="advantage physical therapy" class="logo"/> </a></span>
+			<span class="site-logo-wh"><a href="/"> <img src="https://advantageptbrick.com/~advanub5/wp-content/themes/hogeyboom/images/svg/logo-lt.svg" width="273" height="109" alt="advantage physical therapy" class="logo"/> </a></span>
 			<span class="site-logo-dk"><a href="/"> <img src=""/><img src="https://advantageptbrick.com/~advanub5/wp-content/themes/hogeyboom/images/svg/logo-dk.svg" width="273" height="109" alt="advantage physical therapy" class="logo"/> </a></span>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		</div><!-- .site-branding -->
